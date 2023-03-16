@@ -37,6 +37,8 @@ namespace Calculator
                         case "a":
                             Console.WriteLine(OptionsManager.Add(a, b));
                             break;
+                        case "m":
+                            Console.WriteLine(OptionsManager.Multiply(a, b));
                         case "s":
                             Console.WriteLine(OptionsManager.Subtract(a, b));
                             break;
@@ -46,8 +48,6 @@ namespace Calculator
                         case "dr":
                             Console.WriteLine(OptionsManager.DevideReminder(a, b));
                             break;
-
-
                     }
                 }
                 catch (InvalidOperationException ex)

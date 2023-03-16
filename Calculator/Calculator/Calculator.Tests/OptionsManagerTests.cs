@@ -25,6 +25,16 @@ namespace Calculator.Tests
             Assert.AreEqual(expectedResult, actualResult);
         }
         [Test]
+        public void MultiplyShoudMultiplyAAndB()
+        {
+            double a = 25;
+            double b = 2;
+            string expectedResult = "25 * 2 = 50";
+
+            string actualResult = OptionsManager.Multiply(a, b);
+
+            Assert.AreEqual(expectedResult, actualResult);
+        [Test]
         public void SubtractShouldWork()
         {
             double a = 15;
@@ -58,7 +68,6 @@ namespace Calculator.Tests
             var ex = "15 : 4 = 3";
             string act = OptionsManager.DevideReminder(a, b);
             Assert.AreEqual(ex, act);
-
         }
     }
 }
