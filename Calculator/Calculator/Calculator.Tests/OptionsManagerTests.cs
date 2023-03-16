@@ -23,5 +23,21 @@ namespace Calculator.Tests
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+
+        [Test]
+        public void ShouldSubtractAbsWoksProperly()
+        {
+            //Arrange
+            double a = -25;
+            double b = 2;
+            string expectedResult = "|-25 - 2| = 27";
+
+            //Act
+            string actualResult = OptionsManager.SubtractAbs(a, b);
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
     }
 }
