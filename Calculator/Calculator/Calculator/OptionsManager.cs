@@ -29,12 +29,26 @@ namespace Calculator
         {
             return $"{a} + {b} = {a + b}";
         }
-
         public static string SubtractAbs(double a, double b)
         {
             return $"|{a} - {b}| = {Math.Abs(a - b)}";
         }
-
-
+        public static string Multiply(double a,double b)
+        {
+            return $"{a} * {b} = {a * b}";
+        }
+        public static string Subtract(double a, double b)
+        { return $"{a} - {b} = {a - b}"; }
+        public static string Devide(double a, double b)
+        {
+            if (b==0)
+            {
+                throw new InvalidOperationException ( $"Is not devisible by zero" );
+            }
+            else
+            return $"{a} / {b} = {a / b}"; 
+            }
+        public static string DevideReminder(double a, double b)
+        { return $"{a} : {b} = {a % b}"; }
     }
 }
