@@ -29,8 +29,17 @@ namespace Calculator
         {
             return $"{a} + {b} = {a + b}";
         }
-
-        
+        public static string Subtract(double a, double b)
+        { return $"{a} - {b} = { a - b}"; }
+        public static string Devide(double a, double b)
+        {
+            if (a==0||b==0)
+            {
+                return $"Is not devisible by zero";
+            }
+            return $"{a} / {b} = {a / b:f2}"; }
+        public static string DevideReminder(double a, double b)
+        { return $"{a} : {b} = {a % b}"; }
         
     }
 }
