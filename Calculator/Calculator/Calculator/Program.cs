@@ -70,6 +70,9 @@ namespace Calculator
                         case "avg":
                             Console.WriteLine(OptionsManager.Average(a,b));
                             break;
+                        case "sqrt":
+                            Console.WriteLine(OptionsManager.SumSquareRoots(a, b));
+                            break;
                     }
                 }
                 catch (InvalidOperationException ex)
