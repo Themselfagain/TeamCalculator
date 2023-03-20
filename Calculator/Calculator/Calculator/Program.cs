@@ -58,7 +58,12 @@ namespace Calculator
                         case "max":
                             Console.WriteLine(OptionsManager.Maximum(a, b));
                             break;
-
+                        case "log":
+                            Console.WriteLine(OptionsManager.Logarithm(a, b));
+                            break;
+                        case "avg":
+                            Console.WriteLine(OptionsManager.Average(a,b));
+                            break;
                     }
                 }
                 catch (InvalidOperationException ex)

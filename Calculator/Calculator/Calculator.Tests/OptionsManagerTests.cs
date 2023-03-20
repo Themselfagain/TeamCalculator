@@ -84,8 +84,6 @@ namespace Calculator.Tests
             string act = OptionsManager.DevideReminder(a, b);
             Assert.AreEqual(ex, act);
         }
-
-
         [Test]
         public void MinimumShouldWorksProperly()
         {
@@ -95,8 +93,6 @@ namespace Calculator.Tests
             string act = OptionsManager.Minimum(a, b);
             Assert.AreEqual(ex, act);
         }
-
-
         [Test]
         public void MaximumShouldWorksProperly()
         {
@@ -106,6 +102,13 @@ namespace Calculator.Tests
             string act = OptionsManager.Maximum(a, b);
             Assert.AreEqual(ex, act);
         }
-
+        [Test]
+        public void DevideReminderShouldThrowMessage()
+        {
+            double a = 15;
+            double b = 0;
+            var ex = Assert.Throws<InvalidOperationException>(() => OptionsManager.Devide(a, b));
+            Assert.AreEqual(ex.Message, "Is not devisible by zero");
+        }
     }
 }

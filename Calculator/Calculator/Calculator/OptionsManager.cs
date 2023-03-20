@@ -46,12 +46,38 @@ namespace Calculator
                 throw new InvalidOperationException ( $"Is not devisible by zero" );
             }
             else
+            {
             return $"{a} / {b} = {a / b}"; 
             }
         public static string DevideReminder(double a, double b)
-        { return $"{a} : {b} = {a % b}"; }
+            if (b == 0)
+            {
+                throw new InvalidOperationException($"Is not devisible by zero");
+            }
+            else
+            { return $"{a} : {b} = {a % b}"; }
+        }
+        public static string Logarithm(double a, double b)
+        {
+            if (b == 1 || b == 0 || b < 0)
+            {
+                throw new InvalidOperationException($"The base must be positive and different from 1");
+            }
+            else if (a <= 0)
+            {
+                throw new InvalidOperationException($"The number must be positive");
 
-
+            }
+            else
+            {
+                return $"Log of {a} by base {b} = {Math.Log(a,b)}";
+            }
+        }
+        public static string Average(double a, double b)
+        {
+            return $"Average({a},{b})={(a+b)/2}";
+        }
+        
         public static string Minimum(double a,double b)
         {
             return $"Min({a},{b})={Math.Min(a, b)}";
