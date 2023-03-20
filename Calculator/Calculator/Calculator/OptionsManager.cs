@@ -46,10 +46,10 @@ namespace Calculator
                 throw new InvalidOperationException ( $"Is not devisible by zero" );
             }
             else
+            {
             return $"{a} / {b} = {a / b}"; 
             }
         public static string DevideReminder(double a, double b)
-        {
             if (b == 0)
             {
                 throw new InvalidOperationException($"Is not devisible by zero");
@@ -76,6 +76,16 @@ namespace Calculator
         public static string Average(double a, double b)
         {
             return $"Average({a},{b})={(a+b)/2}";
+        }
+        
+        public static string Minimum(double a,double b)
+        {
+            return $"Min({a},{b})={Math.Min(a, b)}";
+        }
+
+        public static string Maximum(double a, double b)
+        {
+            return $"Max({a},{b})={Math.Max(a, b)}";
         }
     }
 }

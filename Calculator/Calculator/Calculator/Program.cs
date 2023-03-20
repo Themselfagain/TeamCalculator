@@ -52,6 +52,12 @@ namespace Calculator
                         case "dr":
                             Console.WriteLine(OptionsManager.DevideReminder(a, b));
                             break;
+                        case "min":
+                            Console.WriteLine(OptionsManager.Minimum(a,b));
+                            break;
+                        case "max":
+                            Console.WriteLine(OptionsManager.Maximum(a, b));
+                            break;
                         case "log":
                             Console.WriteLine(OptionsManager.Logarithm(a, b));
                             break;
