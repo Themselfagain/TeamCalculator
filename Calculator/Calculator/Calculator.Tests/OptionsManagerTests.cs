@@ -25,6 +25,20 @@ namespace Calculator.Tests
             Assert.AreEqual(expectedResult, actualResult);
         }
         [Test]
+        public void ShouldSubtractAbsWoksProperly()
+        {
+            //Arrange
+            double a = -25;
+            double b = 2;
+            string expectedResult = "|-25 - 2| = 27";
+
+            //Act
+            string actualResult = OptionsManager.SubtractAbs(a, b);
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [Test]
         public void MultiplyShoudMultiplyAAndB()
         {
             double a = 25;
@@ -79,7 +93,30 @@ namespace Calculator.Tests
             string act = OptionsManager.SumSquares(a, b);
             Assert.AreEqual(ex, act);
         }
-        
-
+        public void MinimumShouldWorksProperly()
+        {
+            double a = 1;
+            double b = -23;
+            var ex = "Min(1,-23)=-23";
+            string act = OptionsManager.Minimum(a, b);
+            Assert.AreEqual(ex, act);
+        }
+        [Test]
+        public void MaximumShouldWorksProperly()
+        {
+            double a = 1;
+            double b = -23;
+            var ex = "Max(1,-23)=1";
+            string act = OptionsManager.Maximum(a, b);
+            Assert.AreEqual(ex, act);
+        }
+        [Test]
+        public void DevideReminderShouldThrowMessage()
+        {
+            double a = 15;
+            double b = 0;
+            var ex = Assert.Throws<InvalidOperationException>(() => OptionsManager.Devide(a, b));
+            Assert.AreEqual(ex.Message, "Is not devisible by zero");
+        }
     }
 }

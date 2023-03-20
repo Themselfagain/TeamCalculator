@@ -37,6 +37,9 @@ namespace Calculator
                         case "a":
                             Console.WriteLine(OptionsManager.Add(a, b));
                             break;
+                        case "sabs":
+                            Console.WriteLine(OptionsManager.SubtractAbs(a, b));
+                            break;
                         case "m":
                             Console.WriteLine(OptionsManager.Multiply(a, b));
                             break;
@@ -54,6 +57,18 @@ namespace Calculator
                             break;
                         case "pow":
                             Console.WriteLine(OptionsManager.Power(a, b));
+                            break;
+                        case "min":
+                            Console.WriteLine(OptionsManager.Minimum(a,b));
+                            break;
+                        case "max":
+                            Console.WriteLine(OptionsManager.Maximum(a, b));
+                            break;
+                        case "log":
+                            Console.WriteLine(OptionsManager.Logarithm(a, b));
+                            break;
+                        case "avg":
+                            Console.WriteLine(OptionsManager.Average(a,b));
                             break;
                     }
                 }
