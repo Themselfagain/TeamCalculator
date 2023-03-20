@@ -84,5 +84,28 @@ namespace Calculator.Tests
             string act = OptionsManager.DevideReminder(a, b);
             Assert.AreEqual(ex, act);
         }
+
+
+        [Test]
+        public void MinimumShouldWorksProperly()
+        {
+            double a = 1;
+            double b = -23;
+            var ex = "Min(1,-23)=-23";
+            string act = OptionsManager.Minimum(a, b);
+            Assert.AreEqual(ex, act);
+        }
+
+
+        [Test]
+        public void MaximumShouldWorksProperly()
+        {
+            double a = 1;
+            double b = -23;
+            var ex = "Max(1,-23)=1";
+            string act = OptionsManager.Maximum(a, b);
+            Assert.AreEqual(ex, act);
+        }
+
     }
 }

@@ -42,6 +42,7 @@ namespace Calculator
                             break;
                         case "m":
                             Console.WriteLine(OptionsManager.Multiply(a, b));
+                            break;
                         case "s":
                             Console.WriteLine(OptionsManager.Subtract(a, b));
                             break;
@@ -51,6 +52,13 @@ namespace Calculator
                         case "dr":
                             Console.WriteLine(OptionsManager.DevideReminder(a, b));
                             break;
+                        case "min":
+                            Console.WriteLine(OptionsManager.Minimum(a,b));
+                            break;
+                        case "max":
+                            Console.WriteLine(OptionsManager.Maximum(a, b));
+                            break;
+
                     }
                 }
                 catch (InvalidOperationException ex)
