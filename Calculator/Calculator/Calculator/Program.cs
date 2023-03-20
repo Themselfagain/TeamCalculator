@@ -52,6 +52,12 @@ namespace Calculator
                         case "dr":
                             Console.WriteLine(OptionsManager.DevideReminder(a, b));
                             break;
+                        case "sq":
+                            Console.WriteLine(OptionsManager.SumSquares(a, b));
+                            break;
+                        case "pow":
+                            Console.WriteLine(OptionsManager.Power(a, b));
+                            break;
                         case "min":
                             Console.WriteLine(OptionsManager.Minimum(a,b));
                             break;

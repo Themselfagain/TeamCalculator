@@ -85,6 +85,14 @@ namespace Calculator.Tests
             Assert.AreEqual(ex, act);
         }
         [Test]
+        public void SumSquaresShouldWork()
+        {
+            double a = 5;
+            double b = 2;
+            var ex = "25 + 4 = 29";
+            string act = OptionsManager.SumSquares(a, b);
+            Assert.AreEqual(ex, act);
+        }
         public void MinimumShouldWorksProperly()
         {
             double a = 1;
