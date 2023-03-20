@@ -41,16 +41,24 @@ namespace Calculator
         { return $"{a} - {b} = {a - b}"; }
         public static string Devide(double a, double b)
         {
-            if (b==0)
+            if (b == 0)
             {
-                throw new InvalidOperationException ( $"Is not devisible by zero" );
+                throw new InvalidOperationException($"Is not devisible by zero");
             }
             else
             {
-            return $"{a} / {b} = {a / b}"; 
+                return $"{a} / {b} = {a / b}";
             }
+        }
         public static string DevideReminder(double a, double b)
-        { return $"{a} : {b} = {a % b}"; }
+        {
+            if (b == 0)
+            {
+                throw new InvalidOperationException($"Is not devisible by zero");
+            }
+            else
+            { return $"{a} % {b} = {a % b}"; }
+        }
         public static string SumSquares(double a, double b)
         { return $"{a*a} + {b*b} = {a*a + b*b}"; }
         public static string Power(double a, double b)
@@ -60,13 +68,8 @@ namespace Calculator
                 return $"1";
             }
             else
-                return $"{a} ^ {b} ={Math.Pow( a, b)}";
-            if (b == 0)
-            {
-                throw new InvalidOperationException($"Is not devisible by zero");
-            }
-            else
-            { return $"{a} : {b} = {a % b}"; }
+            { return $"{a} ^ {b} ={Math.Pow(a, b)}"; }
+            
         }
         public static string Logarithm(double a, double b)
         {
@@ -97,6 +100,14 @@ namespace Calculator
         public static string Maximum(double a, double b)
         {
             return $"Max({a},{b})={Math.Max(a, b)}";
+        }
+        public static string SumSquareRoots(double a, double b)
+        {
+            if (b<0||a<0)
+            {
+                throw new InvalidOperationException($"The numbers must be positive or 0");
+            }
+            return $"Square root of {a} + square root of {b} = {Math.Sqrt(a) + Math.Sqrt(b)}";
         }
     }
 }
