@@ -42,6 +42,7 @@ namespace Calculator
                             break;
                         case "m":
                             Console.WriteLine(OptionsManager.Multiply(a, b));
+                            break;
                         case "s":
                             Console.WriteLine(OptionsManager.Subtract(a, b));
                             break;
@@ -50,6 +51,24 @@ namespace Calculator
                             break;
                         case "dr":
                             Console.WriteLine(OptionsManager.DevideReminder(a, b));
+                            break;
+                        case "sq":
+                            Console.WriteLine(OptionsManager.SumSquares(a, b));
+                            break;
+                        case "pow":
+                            Console.WriteLine(OptionsManager.Power(a, b));
+                            break;
+                        case "min":
+                            Console.WriteLine(OptionsManager.Minimum(a,b));
+                            break;
+                        case "max":
+                            Console.WriteLine(OptionsManager.Maximum(a, b));
+                            break;
+                        case "log":
+                            Console.WriteLine(OptionsManager.Logarithm(a, b));
+                            break;
+                        case "avg":
+                            Console.WriteLine(OptionsManager.Average(a,b));
                             break;
                     }
                 }

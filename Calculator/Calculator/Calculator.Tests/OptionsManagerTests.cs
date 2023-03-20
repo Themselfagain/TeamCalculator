@@ -84,5 +84,39 @@ namespace Calculator.Tests
             string act = OptionsManager.DevideReminder(a, b);
             Assert.AreEqual(ex, act);
         }
+        [Test]
+        public void SumSquaresShouldWork()
+        {
+            double a = 5;
+            double b = 2;
+            var ex = "25 + 4 = 29";
+            string act = OptionsManager.SumSquares(a, b);
+            Assert.AreEqual(ex, act);
+        }
+        public void MinimumShouldWorksProperly()
+        {
+            double a = 1;
+            double b = -23;
+            var ex = "Min(1,-23)=-23";
+            string act = OptionsManager.Minimum(a, b);
+            Assert.AreEqual(ex, act);
+        }
+        [Test]
+        public void MaximumShouldWorksProperly()
+        {
+            double a = 1;
+            double b = -23;
+            var ex = "Max(1,-23)=1";
+            string act = OptionsManager.Maximum(a, b);
+            Assert.AreEqual(ex, act);
+        }
+        [Test]
+        public void DevideReminderShouldThrowMessage()
+        {
+            double a = 15;
+            double b = 0;
+            var ex = Assert.Throws<InvalidOperationException>(() => OptionsManager.Devide(a, b));
+            Assert.AreEqual(ex.Message, "Is not devisible by zero");
+        }
     }
 }
