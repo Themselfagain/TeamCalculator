@@ -34,6 +34,7 @@ namespace Calculator.Tests
             string actualResult = OptionsManager.Multiply(a, b);
 
             Assert.AreEqual(expectedResult, actualResult);
+        }
         [Test]
         public void SubtractShouldWork()
         {
@@ -68,6 +69,14 @@ namespace Calculator.Tests
             var ex = "15 : 4 = 3";
             string act = OptionsManager.DevideReminder(a, b);
             Assert.AreEqual(ex, act);
+        }
+        [Test]
+        public void DevideReminderShouldThrowMessage()
+        {
+            double a = 15;
+            double b = 0;
+            var ex = Assert.Throws<InvalidOperationException>(() => OptionsManager.Devide(a, b));
+            Assert.AreEqual(ex.Message, "Is not devisible by zero");
         }
     }
 }

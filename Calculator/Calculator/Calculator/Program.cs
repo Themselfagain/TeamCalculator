@@ -39,6 +39,7 @@ namespace Calculator
                             break;
                         case "m":
                             Console.WriteLine(OptionsManager.Multiply(a, b));
+                            break;
                         case "s":
                             Console.WriteLine(OptionsManager.Subtract(a, b));
                             break;
@@ -47,6 +48,12 @@ namespace Calculator
                             break;
                         case "dr":
                             Console.WriteLine(OptionsManager.DevideReminder(a, b));
+                            break;
+                        case "log":
+                            Console.WriteLine(OptionsManager.Logarithm(a, b));
+                            break;
+                        case "avg":
+                            Console.WriteLine(OptionsManager.Average(a,b));
                             break;
                     }
                 }
