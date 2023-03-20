@@ -39,6 +39,7 @@ namespace Calculator
                             break;
                         case "m":
                             Console.WriteLine(OptionsManager.Multiply(a, b));
+                            break;
                         case "s":
                             Console.WriteLine(OptionsManager.Subtract(a, b));
                             break;
@@ -47,6 +48,12 @@ namespace Calculator
                             break;
                         case "dr":
                             Console.WriteLine(OptionsManager.DevideReminder(a, b));
+                            break;
+                        case "sq":
+                            Console.WriteLine(OptionsManager.SumSquares(a, b));
+                            break;
+                        case "pow":
+                            Console.WriteLine(OptionsManager.Power(a, b));
                             break;
                     }
                 }

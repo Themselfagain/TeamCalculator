@@ -45,5 +45,16 @@ namespace Calculator
             return $"{a} / {b} = {a / b}"; }
         public static string DevideReminder(double a, double b)
         { return $"{a} : {b} = {a % b}"; }
+        public static string SumSquares(double a, double b)
+        { return $"{a*a} + {b*b} = {a*a + b*b}"; }
+        public static string Power(double a, double b)
+        {
+            if (b == 0)
+            {
+                return $"1";
+            }
+            else
+                return $"{a} ^ {b} ={Math.Pow( a, b)}";
+        }
     }
 }

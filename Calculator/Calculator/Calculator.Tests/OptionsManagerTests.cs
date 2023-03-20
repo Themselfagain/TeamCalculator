@@ -34,6 +34,7 @@ namespace Calculator.Tests
             string actualResult = OptionsManager.Multiply(a, b);
 
             Assert.AreEqual(expectedResult, actualResult);
+        }
         [Test]
         public void SubtractShouldWork()
         {
@@ -69,5 +70,16 @@ namespace Calculator.Tests
             string act = OptionsManager.DevideReminder(a, b);
             Assert.AreEqual(ex, act);
         }
+        [Test]
+        public void SumSquaresShouldWork()
+        {
+            double a = 5;
+            double b = 2;
+            var ex = "25 + 4 = 29";
+            string act = OptionsManager.SumSquares(a, b);
+            Assert.AreEqual(ex, act);
+        }
+        
+
     }
 }
